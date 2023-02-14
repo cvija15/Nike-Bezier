@@ -10,6 +10,7 @@
 <body>
   <!-- Swiper -->
   <div class="swiper-container">
+  
 
 <div class="fix"></div>
     <div class="swiper-wrapper">
@@ -102,6 +103,9 @@
 <div class="slider-img">
 <a href="#">
 <img src="images/8.png">
+<div id="bezier">
+	 <canvas id="myCanvas" width="1000px" height="1000px" ></canvas>
+</div>
 </a>
 </div>
 </div>
@@ -114,9 +118,10 @@
 
 </div>
 </div>
-
+	
       
       </div>
+	 
        <!--slider3------------------------------------------------>
       <div class="swiper-slide">
       <div class="slide-box">
@@ -428,9 +433,26 @@
 </div>
 <!-- Swiper JS------------------------ -->
 
+
   <script type="text/javascript" src="js/swiper.min.js"></script>
   <script type="text/javascript"  src="js/JQuery3.3.1.js"></script>
   <script type="text/javascript"  src="js/script.js"></script>
+  
+  <script>
+  var canvas=document.getElementById("myCanvas");
+  var ctx=canvas. getContext("2d");
+  drawShape(ctx, 0, 0);
+  function drawShape(ctx, xoff, yoff) {
+  ctx.beginPath();
+  ctx.moveTo(478 + xoff, 325 + yoff);
+  ctx.bezierCurveTo(388 + xoff, 434 + yoff, 616 + xoff, 335 + yoff, 602 + xoff, 330 + yoff);
+  ctx.bezierCurveTo(588 + xoff, 325 + yoff, 455 + xoff, 380 + yoff, 477 + xoff, 327 + yoff);
+  ctx.stroke();
+  ctx.fill();
+}
+  
+  
+  </script>
  
 </body>
 </html>
