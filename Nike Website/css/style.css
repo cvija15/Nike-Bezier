@@ -126,6 +126,12 @@ h2{
 .slider-img{
 	height:726px;
 }
+
+#svg{
+	position:absolute;
+	top:345px;
+	right:478px;
+}
 		
 .slider-img img{
 	max-height:100%;
